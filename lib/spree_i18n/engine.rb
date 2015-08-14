@@ -1,6 +1,6 @@
 require 'globalize'
 require 'friendly_id/globalize'
-require 'friendly_id/routing_filter'
+require 'routing_filter'
 require 'kaminari-i18n/engine'
 
 module SpreeI18n
