@@ -4,13 +4,14 @@ module SpreeI18n
   module Translatable
     extend ActiveSupport::Concern
 
-    included do
+    included do |klass|
       accepts_nested_attributes_for :translations
+      klass.whitelisted_ransackable_associations |= ['translations']
     end
 
     class_methods do
       def ransack(params = {}, options = {})
-        translated_params = RansackTranslator.new(self, params).translated_params
+        translated_params = RansackTranslator.new(self, params || {}).translated_params
 
         super(translated_params, options)
       end
