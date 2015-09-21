@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'kaminari-i18n', '~> 0.3.2'
   s.add_runtime_dependency 'routing-filter', '~> 0.5.0'
 
+
   s.add_development_dependency 'byebug'
   s.add_development_dependency 'capybara', '~> 2.4.4'
   s.add_development_dependency 'coffee-rails', '~> 4.0.0'
